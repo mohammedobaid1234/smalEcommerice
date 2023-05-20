@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller{
     public function __construct(){
-        $this->middleware(['auth']);
+        $this->middleware(['auth','check:2']);
     }
 
     public function manage(){

@@ -17,7 +17,7 @@ use Yajra\Datatables\Datatables;
 
 class ProductsController extends Controller{
     public function __construct(){
-        $this->middleware(['auth'])->except(['index','showProduct']);
+        $this->middleware(['auth','check:2'])->except(['index','showProduct']);
     }
 
     public function index(Request $request){
